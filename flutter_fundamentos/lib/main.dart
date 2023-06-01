@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_fundamentos/pages/buttons_rotation_text/buttons_rotation_text_page.dart';
 import 'package:flutter_fundamentos/pages/dialogs/dialogs_page.dart';
+import 'package:flutter_fundamentos/pages/forms/forms_page.dart';
 import 'package:flutter_fundamentos/pages/scrolls/list_view_page.dart';
+import 'package:flutter_fundamentos/pages/snackbar/snackbar_page.dart';
 import 'pages/container/container_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/layout_builder/layout_builder_page.dart';
@@ -47,6 +49,8 @@ class MyApp extends StatelessWidget {
             const SingleChildScrollViewPage(),
         AppRoutes.listView: (_) => const ListViewPage(),
         AppRoutes.dialogs: (_) => const DialogsPage(),
+        AppRoutes.snackbar: (_) => const SnackbarPage(),
+        AppRoutes.forms: (_) => const FormsPage(),
       },
     );
   }

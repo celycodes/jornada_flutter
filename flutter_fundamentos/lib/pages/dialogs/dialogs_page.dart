@@ -1,3 +1,8 @@
+// ignore_for_file: avoid_print
+
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fundamentos/pages/dialogs/dialog_custom.dart';
 
@@ -55,7 +60,8 @@ class DialogsPage extends StatelessWidget {
                   showDialog(
                       context: context,
                       builder: (context) {
-                        return AlertDialog(
+                        if (Platform.isIOS) {
+                          return CupertinoAlertDialog(
                           title: const Text('AlertDialog'),
                           content: const SingleChildScrollView(
                             child: ListBody(children: [
@@ -76,7 +82,30 @@ class DialogsPage extends StatelessWidget {
                             ),
                           ],
                         );
-                      });
+                        } else {
+                          return AlertDialog(
+                          title: const Text('AlertDialog'),
+                          content: const SingleChildScrollView(
+                            child: ListBody(children: [
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text('Deseja realmente salvar?'),
+                              )
+                            ]),
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text('Cancelar'),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text('Confirmar'),
+                            ),
+                          ],
+                        );
+                        }
+                      },);
                 },
                 child: const Text('AlertDialog')),
             ElevatedButton(

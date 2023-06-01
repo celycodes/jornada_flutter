@@ -8,4 +8,6 @@ class AppRoutes {
   static const singleChildScrollView = '/scrolls/single_child';
   static const listView = '/scrolls/list_view';
   static const dialogs = '/dialogs';
+  static const snackbar = '/snackbar';
+  static const forms = '/forms';
 }

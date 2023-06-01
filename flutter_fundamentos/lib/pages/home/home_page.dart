@@ -10,6 +10,8 @@ enum PopupMenuPages {
   singleChildScrollView,
   listView,
   dialogs,
+  snackbar,
+  forms,
 }
 
 class HomePage extends StatelessWidget {
@@ -65,6 +67,17 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed(
                   AppRoutes.dialogs,
                 );
+                break;
+              case PopupMenuPages.snackbar:
+                Navigator.of(context).pushNamed(
+                  AppRoutes.snackbar,
+                );
+                break;
+              case PopupMenuPages.forms:
+                Navigator.of(context).pushNamed(
+                  AppRoutes.forms,
+                );
+                break;
             }
           }, itemBuilder: (BuildContext context) {
             return <PopupMenuItem<PopupMenuPages>>[
@@ -99,6 +112,14 @@ class HomePage extends StatelessWidget {
               const PopupMenuItem<PopupMenuPages>(
                 value: PopupMenuPages.dialogs,
                 child: Text('Dialogs'),
+              ),
+              const PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.snackbar,
+                child: Text('SnackBar'),
+              ),
+              const PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.forms,
+                child: Text('Forms'),
               ),
             ];
           }),
@@ -173,6 +194,22 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Dialogs'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  AppRoutes.snackbar,
+                );
+              },
+              child: const Text('SnackBar'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  AppRoutes.forms,
+                );
+              },
+              child: const Text('Forms'),
             ),
           ],
         ),
