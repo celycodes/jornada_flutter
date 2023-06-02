@@ -1,0 +1,34 @@
+[
+    {
+        "city": "São Paulo",
+        "state": "SP"
+    },
+    {
+        "city": "Santo André",
+        "state": "SP"
+    },
+    {
+        "city": "Guarulhos",
+        "state": "SP"
+    },
+    {
+        "city": "São Caetano",
+        "state": "SP"
+    },
+    {
+        "city": "São Bernardo do Campo",
+        "state": "SP"
+    },
+    {
+        "city": "São José do Campos",
+        "state": "SP"
+    },
+    {
+        "city": "Campinas",
+        "state": "SP"
+    },
+    {
+        "city": "Ribeirão Preto",
+        "state": "SP"
+    }
+]

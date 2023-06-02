@@ -10,4 +10,6 @@ class AppRoutes {
   static const dialogs = '/dialogs';
   static const snackbar = '/snackbar';
   static const forms = '/forms';
+  static const cities = '/cities';
+  static const stack = '/stack';
 }

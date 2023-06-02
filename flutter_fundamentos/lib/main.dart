@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_fundamentos/pages/buttons_rotation_text/buttons_rotation_text_page.dart';
+import 'package:flutter_fundamentos/pages/cities/cities_page.dart';
 import 'package:flutter_fundamentos/pages/dialogs/dialogs_page.dart';
 import 'package:flutter_fundamentos/pages/forms/forms_page.dart';
 import 'package:flutter_fundamentos/pages/scrolls/list_view_page.dart';
@@ -13,6 +14,7 @@ import 'pages/layout_builder/layout_builder_page.dart';
 import 'pages/media_query/media_query_page.dart';
 import 'pages/rows_columns/row_column_page.dart';
 import 'pages/scrolls/single_child_scroll_view_page.dart';
+import 'pages/stack/stack_page.dart';
 import 'routes/app_routes.dart';
 
 void main() {
@@ -51,6 +53,8 @@ class MyApp extends StatelessWidget {
         AppRoutes.dialogs: (_) => const DialogsPage(),
         AppRoutes.snackbar: (_) => const SnackbarPage(),
         AppRoutes.forms: (_) => const FormsPage(),
+        AppRoutes.cities: (_) => const CitiesPage(),
+        AppRoutes.stack: (_) => const StackPage(),
       },
     );
   }
