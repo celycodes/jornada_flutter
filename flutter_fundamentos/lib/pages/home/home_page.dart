@@ -14,6 +14,8 @@ enum PopupMenuPages {
   forms,
   cities,
   stack,
+  exampleStack,
+  bottomNavigatorBar,
 }
 
 class HomePage extends StatelessWidget {
@@ -90,6 +92,16 @@ class HomePage extends StatelessWidget {
                   AppRoutes.stack,
                 );
                 break;
+              case PopupMenuPages.exampleStack:
+                Navigator.of(context).pushNamed(
+                  AppRoutes.exampleStack,
+                );
+                break;
+              case PopupMenuPages.bottomNavigatorBar:
+                Navigator.of(context).pushNamed(
+                  AppRoutes.bottomNavigatorBar,
+                );
+                break;
             }
           }, itemBuilder: (BuildContext context) {
             return <PopupMenuItem<PopupMenuPages>>[
@@ -140,6 +152,14 @@ class HomePage extends StatelessWidget {
               const PopupMenuItem<PopupMenuPages>(
                 value: PopupMenuPages.stack,
                 child: Text('Stack'),
+              ),
+              const PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.exampleStack,
+                child: Text('Stack Exemplo'),
+              ),
+              const PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.bottomNavigatorBar,
+                child: Text('BottomNavigatorBar'),
               ),
             ];
           }),
@@ -246,6 +266,22 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Stack'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  AppRoutes.exampleStack,
+                );
+              },
+              child: const Text('Stack Exemplo'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  AppRoutes.bottomNavigatorBar,
+                );
+              },
+              child: const Text('BottomNavigatorBar'),
             ),
           ],
         ),

@@ -8,6 +8,8 @@ import 'package:flutter_fundamentos/pages/dialogs/dialogs_page.dart';
 import 'package:flutter_fundamentos/pages/forms/forms_page.dart';
 import 'package:flutter_fundamentos/pages/scrolls/list_view_page.dart';
 import 'package:flutter_fundamentos/pages/snackbar/snackbar_page.dart';
+import 'package:flutter_fundamentos/pages/stack/example_stack_page.dart';
+import 'pages/bottom_navigator_bar/bottom_navigator_bar_page.dart';
 import 'pages/container/container_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/layout_builder/layout_builder_page.dart';
@@ -55,6 +57,8 @@ class MyApp extends StatelessWidget {
         AppRoutes.forms: (_) => const FormsPage(),
         AppRoutes.cities: (_) => const CitiesPage(),
         AppRoutes.stack: (_) => const StackPage(),
+        AppRoutes.exampleStack: (_) => const ExampleStackPage(),
+        AppRoutes.bottomNavigatorBar: (_) => const BottomNavigatorBarPage(),
       },
     );
   }

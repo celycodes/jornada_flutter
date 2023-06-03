@@ -11,5 +11,7 @@ class AppRoutes {
   static const snackbar = '/snackbar';
   static const forms = '/forms';
   static const cities = '/cities';
-  static const stack = '/stack';
+  static const stack = '/stack/stack';
+  static const exampleStack = '/stack/example_stack';
+  static const bottomNavigatorBar = '/bottom_navigator_bar';
 }
