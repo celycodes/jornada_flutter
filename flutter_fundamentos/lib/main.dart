@@ -10,6 +10,7 @@ import 'package:flutter_fundamentos/pages/scrolls/list_view_page.dart';
 import 'package:flutter_fundamentos/pages/snackbar/snackbar_page.dart';
 import 'package:flutter_fundamentos/pages/stack/example_stack_page.dart';
 import 'pages/bottom_navigator_bar/bottom_navigator_bar_page.dart';
+import 'pages/circle_avatar/circle_avatar_page.dart';
 import 'pages/container/container_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/layout_builder/layout_builder_page.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.stack: (_) => const StackPage(),
         AppRoutes.exampleStack: (_) => const ExampleStackPage(),
         AppRoutes.bottomNavigatorBar: (_) => const BottomNavigatorBarPage(),
+        AppRoutes.circleAvatar: (_) => const CircleAvatarPage(),
       },
     );
   }

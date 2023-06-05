@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class AppRoutes {
   static const homePage = '/';
   static const container = '/container';
@@ -14,4 +16,5 @@ class AppRoutes {
   static const stack = '/stack/stack';
   static const exampleStack = '/stack/example_stack';
   static const bottomNavigatorBar = '/bottom_navigator_bar';
+  static const circleAvatar = '/circle_avatar';
 }

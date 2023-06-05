@@ -16,6 +16,7 @@ enum PopupMenuPages {
   stack,
   exampleStack,
   bottomNavigatorBar,
+  circleAvatar,
 }
 
 class HomePage extends StatelessWidget {
@@ -102,6 +103,11 @@ class HomePage extends StatelessWidget {
                   AppRoutes.bottomNavigatorBar,
                 );
                 break;
+              case PopupMenuPages.circleAvatar:
+                Navigator.of(context).pushNamed(
+                  AppRoutes.circleAvatar,
+                );
+                break;
             }
           }, itemBuilder: (BuildContext context) {
             return <PopupMenuItem<PopupMenuPages>>[
@@ -160,6 +166,10 @@ class HomePage extends StatelessWidget {
               const PopupMenuItem<PopupMenuPages>(
                 value: PopupMenuPages.bottomNavigatorBar,
                 child: Text('BottomNavigatorBar'),
+              ),
+              const PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.circleAvatar,
+                child: Text('Circle Avatar'),
               ),
             ];
           }),
@@ -282,6 +292,14 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('BottomNavigatorBar'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  AppRoutes.circleAvatar,
+                );
+              },
+              child: const Text('CircleAvatar'),
             ),
           ],
         ),
