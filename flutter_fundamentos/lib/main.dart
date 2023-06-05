@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_fundamentos/pages/buttons_rotation_text/buttons_rotation_text_page.dart';
 import 'package:flutter_fundamentos/pages/cities/cities_page.dart';
+import 'package:flutter_fundamentos/pages/colors/colors_page.dart';
 import 'package:flutter_fundamentos/pages/dialogs/dialogs_page.dart';
 import 'package:flutter_fundamentos/pages/forms/forms_page.dart';
 import 'package:flutter_fundamentos/pages/scrolls/list_view_page.dart';
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.exampleStack: (_) => const ExampleStackPage(),
         AppRoutes.bottomNavigatorBar: (_) => const BottomNavigatorBarPage(),
         AppRoutes.circleAvatar: (_) => const CircleAvatarPage(),
+        AppRoutes.colors: (_) => const ColorsPage(),
       },
     );
   }

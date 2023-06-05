@@ -10,7 +10,7 @@ class CircleAvatarPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Circle Avatar'),
       ),
-      body: Row(
+      body: const Row(
         children: [
           // Container(
           //   width: 100,
@@ -21,7 +21,7 @@ class CircleAvatarPage extends StatelessWidget {
           //   ),
           // ),
           Padding(
-            padding: const EdgeInsets.only(top: 10, right: 5, left: 10),
+            padding: EdgeInsets.only(top: 10, right: 5, left: 10),
             child: ImageAvatar(
                 urlImage: 'https://pbs.twimg.com/media/FSgl1OfUcAEsiQV.jpg'),
           ),
@@ -52,7 +52,7 @@ class ImageAvatar extends StatelessWidget {
           width: 100,
           height: 100,
           decoration: BoxDecoration(
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomRight,
                 colors: [
@@ -63,7 +63,7 @@ class ImageAvatar extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(100)),
         ),
-        Container(
+        SizedBox(
           width: 100,
           height: 100,
           child: Padding(
@@ -71,15 +71,15 @@ class ImageAvatar extends StatelessWidget {
             child: CircleAvatar(backgroundImage: NetworkImage(urlImage)),
           ),
         ),
-        Container(
+        SizedBox(
           width: 100,
           height: 100,
           child: Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              padding: EdgeInsets.all(3),
+              padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.bottomRight,
                   colors: [
@@ -91,7 +91,7 @@ class ImageAvatar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(3),
                 color: Colors.deepPurple,
               ),
-              child: Text(
+              child: const Text(
                 'AO VIVO',
                 style: TextStyle(fontSize: 10, color: Colors.white),
               ),

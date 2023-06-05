@@ -16,7 +16,7 @@ class BottomNavigatorBarPage extends StatelessWidget {
             Navigator.of(context).pop();
           }
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             label: 'Profile',
             icon: Icon(Icons.people_alt),
@@ -27,7 +27,7 @@ class BottomNavigatorBarPage extends StatelessWidget {
           ),
         ],
       ),
-      body: IndexedStack(
+      body: const IndexedStack(
         children: [
           ProfilePage(),
         ],
