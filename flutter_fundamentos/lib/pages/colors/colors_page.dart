@@ -6,6 +6,8 @@ class ColorsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cor = Colors.deepPurple.shade500;
+    //final corHex = Color(0XFF8F00FF);
+    //final corRGB = Color.fromRGBO(103, 58, 183, 1);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Colors'),
