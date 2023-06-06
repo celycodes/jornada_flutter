@@ -18,6 +18,7 @@ enum PopupMenuPages {
   bottomNavigatorBar,
   circleAvatar,
   colors,
+  materialBanner,
 }
 
 class HomePage extends StatelessWidget {
@@ -114,6 +115,11 @@ class HomePage extends StatelessWidget {
                   AppRoutes.colors,
                 );
                 break;
+              case PopupMenuPages.materialBanner:
+                Navigator.of(context).pushNamed(
+                  AppRoutes.materialBanner,
+                );
+                break;
             }
           }, itemBuilder: (BuildContext context) {
             return <PopupMenuItem<PopupMenuPages>>[
@@ -181,145 +187,159 @@ class HomePage extends StatelessWidget {
                 value: PopupMenuPages.colors,
                 child: Text('Colors'),
               ),
+              const PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.materialBanner,
+                child: Text('Material Banner'),
+              ),
             ];
           }),
         ],
       ),
-      body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 15,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.container,
-                );
-              },
-              child: const Text('Container'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.rowColumn,
-                );
-              },
-              child: const Text('Rows & Columns'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.mediaQuery,
-                );
-              },
-              child: const Text('MediaQuery'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.layoutBuilder,
-                );
-              },
-              child: const Text('LayoutBuilder'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.buttonsRotationText,
-                );
-              },
-              child: const Text('ButtonsTextRotation'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.singleChildScrollView,
-                );
-              },
-              child: const Text('SingleChildScrollView'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.listView,
-                );
-              },
-              child: const Text('ListView'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.dialogs,
-                );
-              },
-              child: const Text('Dialogs'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.snackbar,
-                );
-              },
-              child: const Text('SnackBar'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.forms,
-                );
-              },
-              child: const Text('Forms'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.cities,
-                );
-              },
-              child: const Text('Cities'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.stack,
-                );
-              },
-              child: const Text('Stack'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.exampleStack,
-                );
-              },
-              child: const Text('Stack Exemplo'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.bottomNavigatorBar,
-                );
-              },
-              child: const Text('BottomNavigatorBar'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.circleAvatar,
-                );
-              },
-              child: const Text('CircleAvatar'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(
-                  AppRoutes.colors,
-                );
-              },
-              child: const Text('Colors'),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 15,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.container,
+                  );
+                },
+                child: const Text('Container'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.rowColumn,
+                  );
+                },
+                child: const Text('Rows & Columns'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.mediaQuery,
+                  );
+                },
+                child: const Text('MediaQuery'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.layoutBuilder,
+                  );
+                },
+                child: const Text('LayoutBuilder'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.buttonsRotationText,
+                  );
+                },
+                child: const Text('ButtonsTextRotation'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.singleChildScrollView,
+                  );
+                },
+                child: const Text('SingleChildScrollView'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.listView,
+                  );
+                },
+                child: const Text('ListView'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.dialogs,
+                  );
+                },
+                child: const Text('Dialogs'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.snackbar,
+                  );
+                },
+                child: const Text('SnackBar'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.forms,
+                  );
+                },
+                child: const Text('Forms'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.cities,
+                  );
+                },
+                child: const Text('Cities'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.stack,
+                  );
+                },
+                child: const Text('Stack'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.exampleStack,
+                  );
+                },
+                child: const Text('Stack Exemplo'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.bottomNavigatorBar,
+                  );
+                },
+                child: const Text('BottomNavigatorBar'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.circleAvatar,
+                  );
+                },
+                child: const Text('CircleAvatar'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.colors,
+                  );
+                },
+                child: const Text('Colors'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.materialBanner,
+                  );
+                },
+                child: const Text('Material Banner'),
+              ),
+            ],
+          ),
         ),
       ),
     );

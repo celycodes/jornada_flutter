@@ -16,4 +16,5 @@ class AppRoutes {
   static const bottomNavigatorBar = '/bottom_navigator_bar';
   static const circleAvatar = '/circle_avatar';
   static const colors = '/colors';
+  static const materialBanner = '/material_banner';
 }

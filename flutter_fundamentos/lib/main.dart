@@ -15,6 +15,7 @@ import 'pages/circle_avatar/circle_avatar_page.dart';
 import 'pages/container/container_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/layout_builder/layout_builder_page.dart';
+import 'pages/material_banner/material_banner_page.dart';
 import 'pages/media_query/media_query_page.dart';
 import 'pages/rows_columns/row_column_page.dart';
 import 'pages/scrolls/single_child_scroll_view_page.dart';
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.bottomNavigatorBar: (_) => const BottomNavigatorBarPage(),
         AppRoutes.circleAvatar: (_) => const CircleAvatarPage(),
         AppRoutes.colors: (_) => const ColorsPage(),
+        AppRoutes.materialBanner: (_) => const MaterialBannerPage(),
       },
     );
   }
