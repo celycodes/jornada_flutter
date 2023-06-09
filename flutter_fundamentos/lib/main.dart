@@ -2,23 +2,24 @@
 
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:flutter_fundamentos/pages/buttons_rotation_text/buttons_rotation_text_page.dart';
-import 'package:flutter_fundamentos/pages/cities/cities_page.dart';
-import 'package:flutter_fundamentos/pages/colors/colors_page.dart';
-import 'package:flutter_fundamentos/pages/dialogs/dialogs_page.dart';
-import 'package:flutter_fundamentos/pages/forms/forms_page.dart';
-import 'package:flutter_fundamentos/pages/scrolls/list_view_page.dart';
-import 'package:flutter_fundamentos/pages/snackbar/snackbar_page.dart';
-import 'package:flutter_fundamentos/pages/stack/example_stack_page.dart';
 import 'pages/bottom_navigator_bar/bottom_navigator_bar_page.dart';
+import 'pages/buttons_rotation_text/buttons_rotation_text_page.dart';
 import 'pages/circle_avatar/circle_avatar_page.dart';
+import 'pages/cities/cities_page.dart';
+import 'pages/colors/colors_page.dart';
 import 'pages/container/container_page.dart';
+import 'pages/desafio/desafio_page.dart';
+import 'pages/dialogs/dialogs_page.dart';
+import 'pages/forms/forms_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/layout_builder/layout_builder_page.dart';
 import 'pages/material_banner/material_banner_page.dart';
 import 'pages/media_query/media_query_page.dart';
 import 'pages/rows_columns/row_column_page.dart';
+import 'pages/scrolls/list_view_page.dart';
 import 'pages/scrolls/single_child_scroll_view_page.dart';
+import 'pages/snackbar/snackbar_page.dart';
+import 'pages/stack/example_stack_page.dart';
 import 'pages/stack/stack_page.dart';
 import 'routes/app_routes.dart';
 
@@ -65,6 +66,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.circleAvatar: (_) => const CircleAvatarPage(),
         AppRoutes.colors: (_) => const ColorsPage(),
         AppRoutes.materialBanner: (_) => const MaterialBannerPage(),
+        AppRoutes.desafio: (_) => const InstaHomePage(),
       },
     );
   }

@@ -17,4 +17,5 @@ class AppRoutes {
   static const circleAvatar = '/circle_avatar';
   static const colors = '/colors';
   static const materialBanner = '/material_banner';
+  static const desafio = '/desafio';
 }

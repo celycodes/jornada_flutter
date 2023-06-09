@@ -19,6 +19,7 @@ enum PopupMenuPages {
   circleAvatar,
   colors,
   materialBanner,
+  desafio,
 }
 
 class HomePage extends StatelessWidget {
@@ -120,6 +121,11 @@ class HomePage extends StatelessWidget {
                   AppRoutes.materialBanner,
                 );
                 break;
+              case PopupMenuPages.desafio:
+                Navigator.of(context).pushNamed(
+                  AppRoutes.desafio,
+                );
+                break;
             }
           }, itemBuilder: (BuildContext context) {
             return <PopupMenuItem<PopupMenuPages>>[
@@ -190,6 +196,10 @@ class HomePage extends StatelessWidget {
               const PopupMenuItem<PopupMenuPages>(
                 value: PopupMenuPages.materialBanner,
                 child: Text('Material Banner'),
+              ),
+              const PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.desafio,
+                child: Text('Desafio Instagram clone'),
               ),
             ];
           }),
@@ -337,6 +347,14 @@ class HomePage extends StatelessWidget {
                   );
                 },
                 child: const Text('Material Banner'),
+              ),
+               ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.desafio,
+                  );
+                },
+                child: const Text('Desafio Instagram clone'),
               ),
             ],
           ),
