@@ -1,6 +1,7 @@
-import 'package:b_flutter_gerencia_de_estado/value_notifier/imc_value_notifier_page.dart';
 import 'package:flutter/material.dart';
+import 'change_notifier/imc_change_notifier_page.dart';
 import 'setState/imc_set_state_page.dart';
+import 'value_notifier/imc_value_notifier_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,7 +18,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('Introdução a Gerência de estado'),
       ),
       body: Center(
         child: Column(
@@ -32,7 +33,8 @@ class HomePage extends StatelessWidget {
               child: const Text('ValueNotifier'),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () =>
+                  _goToPage(context, const ImcChangeNotifierPage()),
               child: const Text('ChangeNotifier'),
             ),
             ElevatedButton(

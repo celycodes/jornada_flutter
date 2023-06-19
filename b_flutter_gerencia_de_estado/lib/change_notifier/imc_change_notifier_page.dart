@@ -1,31 +1,22 @@
-import 'dart:math';
+import 'package:b_flutter_gerencia_de_estado/change_notifier/imc_change_notifier_controller.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import '../widgets/imc_gauge.dart';
 
-class ImcSetStatePage extends StatefulWidget {
-  const ImcSetStatePage({super.key});
+class ImcChangeNotifierPage extends StatefulWidget {
+  const ImcChangeNotifierPage({super.key});
 
   @override
-  State<ImcSetStatePage> createState() => _ImcSetStatePageState();
+  State<ImcChangeNotifierPage> createState() => _ImcChangeNotifierPageState();
 }
 
-class _ImcSetStatePageState extends State<ImcSetStatePage> {
+class _ImcChangeNotifierPageState extends State<ImcChangeNotifierPage> {
   final formKey = GlobalKey<FormState>();
   final pesoEC = TextEditingController();
   final alturaEC = TextEditingController();
-  var imc = 0.0;
-
-  Future<void> _calcularIMC({required peso, required double altura}) async {
-    setState(() {
-      imc = 0;
-    });
-    await Future.delayed(const Duration(seconds: 1));
-    setState(() {
-      imc = peso / pow(altura, 2);
-    });
-  }
+  final controller = ImcChangeNotifierController();
 
   @override
   void dispose() {
@@ -38,7 +29,7 @@ class _ImcSetStatePageState extends State<ImcSetStatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('IMC SetState'),
+        title: const Text('IMC ChangeNotifier'),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -47,7 +38,10 @@ class _ImcSetStatePageState extends State<ImcSetStatePage> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                ImcGauge(imc: imc),
+                AnimatedBuilder(
+                  animation: controller,
+                  builder: (context, child) => ImcGauge(imc: controller.imc),
+                ),
                 const SizedBox(height: 20.0),
                 TextFormField(
                   controller: pesoEC,
@@ -99,8 +93,7 @@ class _ImcSetStatePageState extends State<ImcSetStatePage> {
                       );
                       double peso = formatter.parse(pesoEC.text) as double;
                       double altura = formatter.parse(alturaEC.text) as double;
-
-                      _calcularIMC(peso: peso, altura: altura);
+                      controller.calcularIMC(peso: peso, altura: altura);
                     }
                   },
                   child: const Text('Calcular IMC'),

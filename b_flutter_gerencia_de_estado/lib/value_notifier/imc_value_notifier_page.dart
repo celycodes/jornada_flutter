@@ -32,11 +32,9 @@ class _ImcValueNotifierPageState extends State<ImcValueNotifierPage> {
 
   @override
   Widget build(BuildContext context) {
-    print('--------------------------------');
-    print(' build_tela = ');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Imc ValueNotifier'),
+        title: const Text('IMC ValueNotifier'),
       ),
       body: SingleChildScrollView(
         child: Form(
