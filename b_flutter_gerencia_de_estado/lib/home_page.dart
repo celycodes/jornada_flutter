@@ -1,3 +1,4 @@
+import 'package:b_flutter_gerencia_de_estado/value_notifier/imc_value_notifier_page.dart';
 import 'package:flutter/material.dart';
 import 'setState/imc_set_state_page.dart';
 
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
               child: const Text('SetState'),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => _goToPage(context, const ImcValueNotifierPage()),
               child: const Text('ValueNotifier'),
             ),
             ElevatedButton(

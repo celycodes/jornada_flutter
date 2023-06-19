@@ -4,27 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../widgets/imc_gauge.dart';
 
-class ImcSetStatePage extends StatefulWidget {
-  const ImcSetStatePage({super.key});
+class ImcValueNotifierPage extends StatefulWidget {
+  const ImcValueNotifierPage({super.key});
 
   @override
-  State<ImcSetStatePage> createState() => _ImcSetStatePageState();
+  State<ImcValueNotifierPage> createState() => _ImcValueNotifierPageState();
 }
 
-class _ImcSetStatePageState extends State<ImcSetStatePage> {
+class _ImcValueNotifierPageState extends State<ImcValueNotifierPage> {
+  var imc = ValueNotifier(0.0);
   final formKey = GlobalKey<FormState>();
   final pesoEC = TextEditingController();
   final alturaEC = TextEditingController();
-  var imc = 0.0;
 
   Future<void> _calcularIMC({required peso, required double altura}) async {
-    setState(() {
-      imc = 0;
-    });
+    imc.value = 0;
     await Future.delayed(const Duration(seconds: 1));
-    setState(() {
-      imc = peso / pow(altura, 2);
-    });
+    imc.value = peso / pow(altura, 2);
   }
 
   @override
@@ -36,9 +32,11 @@ class _ImcSetStatePageState extends State<ImcSetStatePage> {
 
   @override
   Widget build(BuildContext context) {
+    print('--------------------------------');
+    print(' build_tela = ');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Imc SetState'),
+        title: const Text('Imc ValueNotifier'),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -47,7 +45,10 @@ class _ImcSetStatePageState extends State<ImcSetStatePage> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                ImcGauge(imc: imc),
+                ValueListenableBuilder<double>(
+                  valueListenable: imc,
+                  builder: ((_, imcValue, __) => ImcGauge(imc: imcValue)),
+                ),
                 const SizedBox(height: 20.0),
                 TextFormField(
                   controller: pesoEC,

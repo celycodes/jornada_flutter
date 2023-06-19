@@ -1,21 +1,22 @@
 import 'dart:math';
+
+import 'package:b_flutter_gerencia_de_estado/widgets/imc_gauge.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../widgets/imc_gauge.dart';
 
-class ImcSetStatePage extends StatefulWidget {
-  const ImcSetStatePage({super.key});
+class ImcTemplatePage extends StatefulWidget {
+  const ImcTemplatePage({super.key});
 
   @override
-  State<ImcSetStatePage> createState() => _ImcSetStatePageState();
+  State<ImcTemplatePage> createState() => _ImcTemplatePageState();
 }
 
-class _ImcSetStatePageState extends State<ImcSetStatePage> {
+class _ImcTemplatePageState extends State<ImcTemplatePage> {
+  var imc = 0.0;
   final formKey = GlobalKey<FormState>();
   final pesoEC = TextEditingController();
   final alturaEC = TextEditingController();
-  var imc = 0.0;
 
   Future<void> _calcularIMC({required peso, required double altura}) async {
     setState(() {
