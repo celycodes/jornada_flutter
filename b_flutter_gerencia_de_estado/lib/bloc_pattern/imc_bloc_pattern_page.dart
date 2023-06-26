@@ -18,7 +18,6 @@ class _ImcBlocPatternPageState extends State<ImcBlocPatternPage> {
   final pesoEC = TextEditingController();
   final alturaEC = TextEditingController();
   final controller = ImcBlocPatternController();
-  // 14:05
 
   @override
   void dispose() {
@@ -48,6 +47,14 @@ class _ImcBlocPatternPageState extends State<ImcBlocPatternPage> {
                       return ImcGauge(imc: imc);
                     }),
                 const SizedBox(height: 20.0),
+                StreamBuilder<ImcState>(
+                  stream: controller.imcOut,
+                  builder: (context, snapshot) {
+                    return Visibility(
+                        visible: snapshot.data is ImcStateLoading,
+                        child: const Center(child: CircularProgressIndicator()),);
+                  },
+                ),
                 TextFormField(
                   controller: pesoEC,
                   keyboardType: TextInputType.number,
