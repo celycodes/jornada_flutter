@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:b_flutter_gerencia_de_estado/widgets/imc_gauge.dart';
+import 'package:b_flutter_gerencia_de_estado_introducao/widgets/imc_gauge.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';

@@ -1,5 +1,5 @@
-import 'package:b_flutter_gerencia_de_estado/bloc_pattern/imc_bloc_pattern_page.dart';
 import 'package:flutter/material.dart';
+import 'bloc_pattern/imc_bloc_pattern_page.dart';
 import 'change_notifier/imc_change_notifier_page.dart';
 import 'setState/imc_set_state_page.dart';
 import 'value_notifier/imc_value_notifier_page.dart';

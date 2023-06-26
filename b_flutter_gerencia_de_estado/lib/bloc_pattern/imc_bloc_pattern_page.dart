@@ -1,10 +1,10 @@
-import 'package:b_flutter_gerencia_de_estado/bloc_pattern/imc_bloc_pattern_controller.dart';
-import 'package:b_flutter_gerencia_de_estado/bloc_pattern/imc_state.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../widgets/imc_gauge.dart';
+import 'imc_bloc_pattern_controller.dart';
+import 'imc_state.dart';
 
 class ImcBlocPatternPage extends StatefulWidget {
   const ImcBlocPatternPage({super.key});

@@ -1,9 +1,8 @@
-import 'package:b_flutter_gerencia_de_estado/change_notifier/imc_change_notifier_controller.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import '../widgets/imc_gauge.dart';
+import 'imc_change_notifier_controller.dart';
 
 class ImcChangeNotifierPage extends StatefulWidget {
   const ImcChangeNotifierPage({super.key});
