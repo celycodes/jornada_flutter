@@ -18,4 +18,6 @@ class AppRoutes {
   static const colors = '/colors';
   static const materialBanner = '/material_banner';
   static const desafio = '/desafio';
+  static const inherited = '/inherited';
+  static const splash = '/splash';
 }

@@ -1,5 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'pages/bottom_navigator_bar/bottom_navigator_bar_page.dart';
@@ -38,36 +36,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter fundamentos',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: false,
-      ),
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      routes: {
-        AppRoutes.homePage: (_) => const HomePage(),
-        AppRoutes.container: (_) => const ContainerPage(),
-        AppRoutes.rowColumn: (_) => const RowColumnPage(),
-        AppRoutes.mediaQuery: (_) => const MediaQueryPage(),
-        AppRoutes.layoutBuilder: (_) => const LayoutBuilderPage(),
-        AppRoutes.buttonsRotationText: (_) => const ButtonsRotationTextPage(),
-        AppRoutes.singleChildScrollView: (_) =>
-            const SingleChildScrollViewPage(),
-        AppRoutes.listView: (_) => const ListViewPage(),
-        AppRoutes.dialogs: (_) => const DialogsPage(),
-        AppRoutes.snackbar: (_) => const SnackbarPage(),
-        AppRoutes.forms: (_) => const FormsPage(),
-        AppRoutes.cities: (_) => const CitiesPage(),
-        AppRoutes.stack: (_) => const StackPage(),
-        AppRoutes.exampleStack: (_) => const ExampleStackPage(),
-        AppRoutes.bottomNavigatorBar: (_) => const BottomNavigatorBarPage(),
-        AppRoutes.circleAvatar: (_) => const CircleAvatarPage(),
-        AppRoutes.colors: (_) => const ColorsPage(),
-        AppRoutes.materialBanner: (_) => const MaterialBannerPage(),
-        AppRoutes.desafio: (_) => const InstaHomePage(),
-      },
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter fundamentos',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: false,
+        ),
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
+        routes: {
+          AppRoutes.homePage: (_) => const HomePage(),
+          AppRoutes.container: (_) => const ContainerPage(),
+          AppRoutes.rowColumn: (_) => const RowColumnPage(),
+          AppRoutes.mediaQuery: (_) => const MediaQueryPage(),
+          AppRoutes.layoutBuilder: (_) => const LayoutBuilderPage(),
+          AppRoutes.buttonsRotationText: (_) => const ButtonsRotationTextPage(),
+          AppRoutes.singleChildScrollView: (_) =>
+              const SingleChildScrollViewPage(),
+          AppRoutes.listView: (_) => const ListViewPage(),
+          AppRoutes.dialogs: (_) => const DialogsPage(),
+          AppRoutes.snackbar: (_) => const SnackbarPage(),
+          AppRoutes.forms: (_) => const FormsPage(),
+          AppRoutes.cities: (_) => const CitiesPage(),
+          AppRoutes.stack: (_) => const StackPage(),
+          AppRoutes.exampleStack: (_) => const ExampleStackPage(),
+          AppRoutes.bottomNavigatorBar: (_) => const BottomNavigatorBarPage(),
+          AppRoutes.circleAvatar: (_) => const CircleAvatarPage(),
+          AppRoutes.colors: (_) => const ColorsPage(),
+          AppRoutes.materialBanner: (_) => const MaterialBannerPage(),
+          AppRoutes.desafio: (_) => const InstaHomePage(),
+        },
+      );
   }
 }

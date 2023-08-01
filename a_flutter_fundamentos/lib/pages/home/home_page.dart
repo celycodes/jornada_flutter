@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../routes/app_routes.dart';
 
 
@@ -125,7 +124,7 @@ class HomePage extends StatelessWidget {
                 break;
               case PopupMenuPages.desafio:
                 Navigator.of(context).pushNamed(
-                  AppRoutes.desafio,
+                  AppRoutes.desafio, 
                 );
                 break;
             }
