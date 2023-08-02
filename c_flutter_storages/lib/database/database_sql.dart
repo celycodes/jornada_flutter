@@ -5,13 +5,12 @@ import 'package:sqflite/sqflite.dart';
 //import 'package:sqflite/sqlite_api.dart';
 
 class DatabaseSqLite {
-  //Future<Database> openConnection() async {
-  Future<void> openConnection() async {
+  Future<Database> openConnection() async {
     final databasePath = await getDatabasesPath();
     final databaseFinalPath = join(databasePath, 'SQLITE_EXAMPLE');
-    await openDatabase(
+    return await  openDatabase(
       databaseFinalPath,
-      version: 2,
+      version: 3,
       onConfigure: (db) async {
         print('onConfigure sendo chamado');
         await db.execute('PRAGMA foreing_keys = ON');
@@ -22,7 +21,7 @@ class DatabaseSqLite {
         final batch = db.batch();
         batch.execute('''
         create table teste(id Integer primary key autoincrement,
-        nome varcahar(100) 
+        nome varchar(100) 
         )
         ''');
         batch.commit();
@@ -34,14 +33,14 @@ class DatabaseSqLite {
         if (oldVersion == 1) {
           batch.execute('''
           create table produto(id Integer primary key autoincrement,
-          nome varcahar(100) 
+          nome varchar(100) 
           )
           ''');
         }
         if (oldVersion == 2) {
           batch.execute('''
-          create table categoria(id Integer primary key autoincrement,
-          nome varcahar(100) 
+          create table pessoa(id Integer primary key autoincrement,
+          nome varchar(100) 
           )
           ''');
         }
@@ -51,9 +50,9 @@ class DatabaseSqLite {
       onDowngrade: (Database db, int oldVersion, int version) {
         print('onDowngrade chamado');
         final batch = db.batch();
-        if (oldVersion == 3) {
+        if (oldVersion == 2) {
           batch.execute('''
-          drop table categoria
+          drop table produto
           ''');
         }
         batch.commit();

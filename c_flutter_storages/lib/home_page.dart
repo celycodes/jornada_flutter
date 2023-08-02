@@ -12,7 +12,17 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    DatabaseSqLite().openConnection();
+    _database();
+  }
+
+  Future<void> _database() async {
+    final database = await DatabaseSqLite().openConnection();
+
+    database.rawInsert('insert into produto values(null, ?)', ['caneta']);
+    //var result = await database.query('categoria');
+    //print(result);
+    //var resultado = await database.rawQuery('select * from pessoa');
+    //print(resultado);
   }
 
   @override
